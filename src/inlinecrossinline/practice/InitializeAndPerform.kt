@@ -18,6 +18,7 @@ inline fun initializeAndPerform(noinline init: ()-> Unit, crossinline process: (
     initializer()
     val processer = {
         process()
+        println("Data")
     }
     processer()
 }

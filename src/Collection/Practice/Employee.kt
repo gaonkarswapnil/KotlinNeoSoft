@@ -7,41 +7,42 @@ data class Employee(
     val department: String,
     val position: String,
     val salary: Double,
-    val yearsOfExperience: Int
+    val yearsOfExperience: Int,
+    val skills: List<String>
 )
 
 fun generateEmployees(): List<Employee> {
     return listOf(
-        Employee(1, "Alice Johnson", 28, "Finance", "Analyst", 55000.0, 4),
-        Employee(2, "Bob Smith", 35, "Finance", "Senior Analyst", 72000.0, 10),
-        Employee(3, "Charlie Brown", 45, "Human Resources", "Manager", 90000.0, 20),
-        Employee(4, "Diana Prince", 32, "IT", "Developer", 65000.0, 8),
-        Employee(5, "Evan Thomas", 29, "IT", "Junior Developer", 50000.0, 3),
-        Employee(6, "Fiona Adams", 41, "Finance", "Accountant", 78000.0, 18),
-        Employee(7, "George Martin", 38, "Operations", "Operations Manager", 85000.0, 15),
-        Employee(8, "Hannah White", 26, "Marketing", "Marketing Coordinator", 48000.0, 2),
-        Employee(9, "Ian Black", 50, "IT", "IT Manager", 95000.0, 25),
-        Employee(10, "Julia Green", 31, "Human Resources", "Recruiter", 58000.0, 6),
-        Employee(11, "Kevin Brown", 37, "Finance", "Financial Advisor", 80000.0, 12),
-        Employee(12, "Laura Scott", 44, "Operations", "Operations Analyst", 67000.0, 19),
-        Employee(13, "Michael Davis", 30, "IT", "System Administrator", 62000.0, 5),
-        Employee(14, "Natalie King", 27, "Finance", "Analyst", 54000.0, 4),
-        Employee(15, "Oliver Clark", 33, "Marketing", "Marketing Specialist", 60000.0, 7),
-        Employee(16, "Paula Lewis", 39, "Human Resources", "HR Specialist", 74000.0, 13),
-        Employee(17, "Quentin Taylor", 47, "Operations", "Senior Operations Manager", 92000.0, 22),
-        Employee(18, "Rachel Harris", 34, "Finance", "Budget Analyst", 68000.0, 9),
-        Employee(19, "Steve Wilson", 42, "IT", "Lead Developer", 86000.0, 17),
-        Employee(20, "Tina Thompson", 36, "Marketing", "Brand Manager", 73000.0, 11),
-        Employee(21, "Ursula Miller", 29, "Finance", "Credit Analyst", 55000.0, 4),
-        Employee(22, "Victor Wright", 40, "Human Resources", "Compensation Specialist", 79000.0, 16),
-        Employee(23, "Wendy Baker", 31, "Operations", "Operations Coordinator", 60000.0, 7),
-        Employee(24, "Xander Collins", 25, "IT", "Junior Developer", 52000.0, 2),
-        Employee(25, "Yvonne Howard", 48, "Finance", "Finance Manager", 93000.0, 24),
-        Employee(26, "Zachary Perez", 28, "Marketing", "Social Media Manager", 57000.0, 4),
-        Employee(27, "Amy Young", 35, "Finance", "Risk Analyst", 75000.0, 10),
-        Employee(28, "Brian Foster", 39, "IT", "DevOps Engineer", 80000.0, 14),
-        Employee(29, "Catherine Bell", 30, "Human Resources", "HR Coordinator", 58000.0, 6),
-        Employee(30, "David Griffin", 46, "Operations", "Logistics Manager", 87000.0, 21)
+        Employee(1, "Alice Johnson", 28, "Finance", "Analyst", 55000.0, 4, listOf("Financial Analysis", "Excel", "Data Visualization")),
+        Employee(2, "Bob Smith", 35, "Finance", "Senior Analyst", 72000.0, 10, listOf("Financial Modeling", "Investment Analysis", "Risk Management")),
+        Employee(3, "Charlie Brown", 45, "Human Resources", "Manager", 90000.0, 20, listOf("Talent Acquisition", "Employee Relations", "HR Strategy")),
+        Employee(4, "Diana Prince", 32, "IT", "Developer", 65000.0, 8, listOf("Java", "Spring Boot", "Database Management")),
+        Employee(5, "Evan Thomas", 29, "IT", "Junior Developer", 50000.0, 3, listOf("Python", "HTML/CSS", "JavaScript")),
+        Employee(6, "Fiona Adams", 41, "Finance", "Accountant", 78000.0, 18, listOf("Accounting Principles", "Tax Preparation", "Financial Reporting")),
+        Employee(7, "George Martin", 38, "Operations", "Operations Manager", 85000.0, 15, listOf("Process Improvement", "Project Management", "Supply Chain Management")),
+        Employee(8, "Hannah White", 26, "Marketing", "Marketing Coordinator", 48000.0, 2, listOf("Social Media Marketing", "Content Creation", "SEO")),
+        Employee(9, "Ian Black", 50, "IT", "IT Manager", 95000.0, 25, listOf("IT Infrastructure", "Team Management", "Network Security")),
+        Employee(10, "Julia Green", 31, "Human Resources", "Recruiter", 58000.0, 6, listOf("Recruitment", "Employee Onboarding", "Interviewing")),
+        Employee(11, "Kevin Brown", 37, "Finance", "Financial Advisor", 80000.0, 12, listOf("Investment Strategies", "Client Relations", "Financial Planning")),
+        Employee(12, "Laura Scott", 44, "Operations", "Operations Analyst", 67000.0, 19, listOf("Data Analysis", "Operational Efficiency", "Reporting")),
+        Employee(13, "Michael Davis", 30, "IT", "System Administrator", 62000.0, 5, listOf("System Maintenance", "Troubleshooting", "Network Administration")),
+        Employee(14, "Natalie King", 27, "Finance", "Analyst", 54000.0, 4, listOf("Budget Analysis", "Data Analysis", "Financial Forecasting")),
+        Employee(15, "Oliver Clark", 33, "Marketing", "Marketing Specialist", 60000.0, 7, listOf("Market Research", "Campaign Management", "Brand Strategy")),
+        Employee(16, "Paula Lewis", 39, "Human Resources", "HR Specialist", 74000.0, 13, listOf("Employee Benefits", "Labor Law", "Conflict Resolution")),
+        Employee(17, "Quentin Taylor", 47, "Operations", "Senior Operations Manager", 92000.0, 22, listOf("Strategic Planning", "Team Leadership", "Operational Strategy")),
+        Employee(18, "Rachel Harris", 34, "Finance", "Budget Analyst", 68000.0, 9, listOf("Budget Management", "Financial Analysis", "Cost Control")),
+        Employee(19, "Steve Wilson", 42, "IT", "Lead Developer", 86000.0, 17, listOf("Software Development", "Code Review", "Architecture Design")),
+        Employee(20, "Tina Thompson", 36, "Marketing", "Brand Manager", 73000.0, 11, listOf("Brand Management", "Market Strategy", "Advertising")),
+        Employee(21, "Ursula Miller", 29, "Finance", "Credit Analyst", 55000.0, 4, listOf("Credit Risk Assessment", "Financial Reporting", "Data Analysis")),
+        Employee(22, "Victor Wright", 40, "Human Resources", "Compensation Specialist", 79000.0, 16, listOf("Compensation Analysis", "Benefits Management", "HR Analytics")),
+        Employee(23, "Wendy Baker", 31, "Operations", "Operations Coordinator", 60000.0, 7, listOf("Logistics", "Project Coordination", "Process Optimization")),
+        Employee(24, "Xander Collins", 25, "IT", "Junior Developer", 52000.0, 2, listOf("JavaScript", "React", "Front-End Development")),
+        Employee(25, "Yvonne Howard", 48, "Finance", "Finance Manager", 93000.0, 24, listOf("Financial Strategy", "Team Management", "Reporting")),
+        Employee(26, "Zachary Perez", 28, "Marketing", "Social Media Manager", 57000.0, 4, listOf("Social Media Strategy", "Content Creation", "Analytics")),
+        Employee(27, "Amy Young", 35, "Finance", "Risk Analyst", 75000.0, 10, listOf("Risk Assessment", "Financial Modeling", "Investment Analysis")),
+        Employee(28, "Brian Foster", 39, "IT", "DevOps Engineer", 80000.0, 14, listOf("CI/CD", "Cloud Services", "Automation")),
+        Employee(29, "Catherine Bell", 30, "Human Resources", "HR Coordinator", 58000.0, 6, listOf("HR Operations", "Recruitment", "Employee Engagement")),
+        Employee(30, "David Griffin", 46, "Operations", "Logistics Manager", 87000.0, 21, listOf("Logistics Management", "Supply Chain Optimization", "Vendor Management"))
     )
 }
 
@@ -120,12 +121,13 @@ fun totalSalary(empData: List<Employee>) {
 //Compute the average age of employees.
 fun averageAge(empData: List<Employee>) {
     println(empData.sumOf { it.age } / empData.size)
+    val data = empData.map { it.age }.average()
 }
 
 //Find the employee with the highest and lowest salary.
 fun highAndLowSalary(empData: List<Employee>) {
-    println(empData.maxOf { it.salary })
-    println(empData.minOf { it.salary })
+    println(empData.maxOfOrNull { it.salary })
+    println(empData.minOfOrNull { it.salary })
 }
 
 //Partition the employees into two lists: those with more than 10 years of experience and those with 10 years or less.
@@ -145,7 +147,7 @@ fun partitionEmpOnSalary(empData: List<Employee>) {
 
 //Assume each employee has a list of skills. Use flatMap to create a list of all skills across all employees.
 fun empSkills(empData: List<Employee>) {
-//    empData.flatMap { it }
+    empData.flatMap { it.skills }.forEach { println(it) }
 }
 
 //Suppose you have another list of bonus percentages. Zip the list of employees with this bonus list and calculate the new salary for each employee.
@@ -196,7 +198,8 @@ fun uniqueSalary(empData: List<Employee>) {
 //Create a list of employees with distinct departments.
 fun distinctDepartment(empData: List<Employee>) {
 //    empData.map{ it.department }.toSet().forEach { println(it) }
-    empData.distinctBy { it.department }.forEach { println(it) }
+//    empData.distinctBy { it.department }.forEach { println(it) }
+    empData.groupBy { it.department }.forEach{ println(it) }
 }
 
 //Check if there is any employee in the "IT" department.
@@ -231,7 +234,8 @@ fun drop5Emp(empData: List<Employee>) {
 
 //Drop employees from the list while their years of experience are less than 5.
 fun dropEmpByExp(empData: List<Employee>) {
-    empData.dropWhile { it.yearsOfExperience < 5 }.forEach { println(it) }
+//    empData.dropWhile { it.yearsOfExperience < 10 }.forEach { println(it) }
+    empData.filter { it.yearsOfExperience < 5 }.forEach { println(it) }
 }
 
 //Add a new employee to the existing list of employees.
@@ -267,8 +271,8 @@ fun main() {
 //    highAndLowSalary(generateEmployees())
 //    partitonEmp(generateEmployees())
 //    partitionEmpOnSalary(generateEmployees())
-
-    zipNewSalary(generateEmployees())
+//    empSkills(generateEmployees())
+//    zipNewSalary(generateEmployees())
 //    totalYearsExp(generateEmployees())
 //    maxSalaryReduce(generateEmployees())
 //    divideListOfEmployee(generateEmployees()).forEach{ println(it) }
@@ -276,7 +280,7 @@ fun main() {
 //    mapEmployeeByID(generateEmployees())
 //    mapEmployeeByNameAndDepartment(generateEmployees())
 //    uniqueSalary(generateEmployees())
-//    distinctDepartment(generateEmployees())
+    distinctDepartment(generateEmployees())
 //    checkEmployeeFromDepartment(generateEmployees())
 //    empSalaryGreaterThan(generateEmployees())
 //    empUnder25(generateEmployees())
@@ -291,27 +295,27 @@ fun main() {
 
 
     val emp = listOf(
-        Employee(1, "Alice Johnson", 28, "Finance", "Analyst", 55000.0, 4),
-        Employee(2, "Bob Smith", 35, "Finance", "Senior Analyst", 72000.0, 10),
-        Employee(3, "Charlie Brown", 45, "Human Resources", "Manager", 90000.0, 20),
-        Employee(4, "Diana Prince", 32, "IT", "Developer", 65000.0, 8),
-        Employee(5, "Evan Thomas", 29, "IT", "Junior Developer", 50000.0, 3),
-        Employee(6, "Fiona Adams", 41, "Finance", "Accountant", 78000.0, 18),
-        Employee(7, "George Martin", 38, "Operations", "Operations Manager", 85000.0, 15),
-        Employee(8, "Hannah White", 26, "Marketing", "Marketing Coordinator", 48000.0, 2),
-        Employee(9, "Ian Black", 50, "IT", "IT Manager", 95000.0, 25),
-        Employee(10, "Julia Green", 31, "Human Resources", "Recruiter", 58000.0, 6),
-    )
+        Employee(1, "Alice Johnson", 28, "Finance", "Analyst", 55000.0, 4, listOf("Financial Analysis", "Excel", "Data Visualization")),
+        Employee(2, "Bob Smith", 35, "Finance", "Senior Analyst", 72000.0, 10, listOf("Financial Modeling", "Investment Analysis", "Risk Management")),
+        Employee(3, "Charlie Brown", 45, "Human Resources", "Manager", 90000.0, 20, listOf("Talent Acquisition", "Employee Relations", "HR Strategy")),
+        Employee(4, "Diana Prince", 32, "IT", "Developer", 65000.0, 8, listOf("Java", "Spring Boot", "Database Management")),
+        Employee(5, "Evan Thomas", 29, "IT", "Junior Developer", 50000.0, 3, listOf("Python", "HTML/CSS", "JavaScript")),
+        Employee(6, "Fiona Adams", 41, "Finance", "Accountant", 78000.0, 18, listOf("Accounting Principles", "Tax Preparation", "Financial Reporting")),
+        Employee(7, "George Martin", 38, "Operations", "Operations Manager", 85000.0, 15, listOf("Process Improvement", "Project Management", "Supply Chain Management")),
+        Employee(8, "Hannah White", 26, "Marketing", "Marketing Coordinator", 48000.0, 2, listOf("Social Media Marketing", "Content Creation", "SEO")),
+        Employee(9, "Ian Black", 50, "IT", "IT Manager", 95000.0, 25, listOf("IT Infrastructure", "Team Management", "Network Security")),
+        Employee(10, "Julia Green", 31, "Human Resources", "Recruiter", 58000.0, 6, listOf("Recruitment", "Employee Onboarding", "Interviewing")),
+        )
 //    removeEmployeeFromList(generateEmployees(), emp)
     val emp2 = listOf(
-        Employee(8, "Swapnil Gaonkar", 26, "Marketing", "Marketing Coordinator", 48000.0, 2),
-        Employee(9, "Oliver Queen", 50, "IT", "IT Manager", 95000.0, 25),
-        Employee(10, "Julia Green", 31, "Human Resources", "Recruiter", 58000.0, 6),
-        Employee(11, "Kevin Brown", 37, "Finance", "Financial Advisor", 80000.0, 12),
-        Employee(12, "Laura Scott", 44, "Operations", "Operations Analyst", 67000.0, 19),
-        Employee(13, "Michael Davis", 30, "IT", "System Administrator", 62000.0, 5),
-        Employee(14, "Natalie King", 27, "Finance", "Analyst", 54000.0, 4),
-        Employee(15, "Oliver Clark", 33, "Marketing", "Marketing Specialist", 60000.0, 7),
+        Employee(8, "Swapnil Gaonkar", 26, "Marketing", "Marketing Coordinator", 48000.0, 2,  listOf("Social Media Marketing", "Content Creation", "SEO")),
+        Employee(9, "Oliver Queen", 50, "IT", "IT Manager", 95000.0, 25,  listOf("IT Infrastructure", "Team Management", "Network Security")),
+        Employee(10, "Julia Green", 31, "Human Resources", "Recruiter", 58000.0, 6, listOf("Recruitment", "Employee Onboarding", "Interviewing")),
+        Employee(11, "Kevin Brown", 37, "Finance", "Financial Advisor", 80000.0, 12, listOf("Investment Strategies", "Client Relations", "Financial Planning")),
+        Employee(12, "Laura Scott", 44, "Operations", "Operations Analyst", 67000.0, 19, listOf("Data Analysis", "Operational Efficiency", "Reporting")),
+        Employee(13, "Michael Davis", 30, "IT", "System Administrator", 62000.0, 5, listOf("System Maintenance", "Troubleshooting", "Network Administration")),
+        Employee(14, "Natalie King", 27, "Finance", "Analyst", 54000.0, 4, listOf("Budget Analysis", "Data Analysis", "Financial Forecasting")),
+        Employee(15, "Oliver Clark", 33, "Marketing", "Marketing Specialist", 60000.0, 7, listOf("Market Research", "Campaign Management", "Brand Strategy"))
     )
 //    mergeEmployee(emp, emp2);
 
